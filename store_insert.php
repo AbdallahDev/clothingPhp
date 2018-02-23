@@ -13,7 +13,7 @@ $complex_id = 0;//this is the default value for the complex id
 //here if the complex id set the complex the value of the comple_id variable 
 //will be the value from the $_GET['complex_id'], else it will keep the default
 //value zero
-if ($_GET['complex_id'] != 0) {
+if (isset($_GET['complex_id']) && $_GET['complex_id'] != 0) {
     $complex_id = $_GET['complex_id'];
 }
 
