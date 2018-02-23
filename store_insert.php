@@ -2,6 +2,7 @@
 
 $con = new mysqli("localhost", "root", "", "clothing");
 
+//here i added this code to make the table accept arabic words
 mysqli_query($con, "SET NAMES 'utf8'");
 mysqli_query($con, 'SET CHARACTER SET utf8');
 
