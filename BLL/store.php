@@ -19,3 +19,4 @@ class store extends my_db {
     }
 
 }
+
