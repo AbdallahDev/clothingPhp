@@ -2,11 +2,10 @@
 
 include_once '../BLL/store.php';
 
-$store_name = $_GET['store_name'];
-$area_id = $_GET['area_id'];
-$complex_id = $_GET['complex_id'];
-$store_image = $_GET['store_image'];
-$mobile = $_GET['mobile'];
-
+//i declared object from the store class to be used later.
 $store = new store();
-$store->store_insert($store_name, $area_id, $complex_id, $store_image, $mobile);
+$max_id_rs = $store->store_max_id_select();
+$max_store_id = $max_id_rs->fetch_assoc();
+
+
+echo $max_store_id['store_id'] + 1;
