@@ -6,7 +6,6 @@ include_once '../BLL/store.php';
 //complexes, so in that case i'll set the complex id to 0, that means in the 
 //database it dosen't belong to any complex.
 $complex_id = 0; //this is the default value for the complex id
-
 //bellow i declared all the variable that will be inserted in the store table
 //from the get method
 $store_name = $_GET['store_name'];
