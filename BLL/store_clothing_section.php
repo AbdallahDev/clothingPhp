@@ -3,8 +3,6 @@
 include_once '../DAL/my_db.php';
 
 class store_clothing_section extends my_db {
-
-    
     
     public function store_clothing_section_insert($store_id
     , $clothing_section_id) {
