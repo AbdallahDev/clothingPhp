@@ -12,8 +12,10 @@ $complex_id = 0; //this is the default value for the complex id
 //
 //for the sotre id i'll save the max store id in the database plus 1
 //to make sure that all the id's aren't identical, because it's the primary key,
-//and i can't make it autoincreament because i'll needed later.
-$store_id = $store->store_max_id_select() + 1;
+//and i can't make it auto increament because i'll needed later.
+$max_id_rs = $store->store_max_id_select();
+$max_store_id = $max_id_rs->fetch_assoc();
+$store_id = $max_store_id['store_id'] + 1;
 
 //bellow i declared all the reset variable that will be inserted in the store table
 //from the get method
