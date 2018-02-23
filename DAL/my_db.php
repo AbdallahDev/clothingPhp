@@ -1,6 +1,6 @@
 <?php
 
-include 'my_con.php';
+include_once 'my_con.php';
 
 class my_db extends my_con {
 
