@@ -1,10 +1,6 @@
 <?php
 
-$con = new mysqli("localhost", "root", "", "clothing");
-
-//here i added this code to make the table accept arabic words
-mysqli_query($con, "SET NAMES 'utf8'");
-mysqli_query($con, 'SET CHARACTER SET utf8');
+include_once '../BLL/store.php';
 
 //here i'll check for the complex value, because some stores don't exist in 
 //complexes, so in that case i'll set the complex id to 0, that means in the 
