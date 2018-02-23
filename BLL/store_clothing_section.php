@@ -12,3 +12,4 @@ class store_clothing_section extends my_db {
     }
 
 }
+
