@@ -33,3 +33,33 @@ if (isset($_GET['complex_id']) && $_GET['complex_id'] != 0) {
 }
 
 $store->store_insert($store_id, $store_name, $area_id, $complex_id, $store_image, $mobile);
+
+
+//bellow i'll write the code related to add store_clothing_section in the db 
+//table
+include_once '../BLL/store_clothing_section.php';
+$store_clothing_section = new store_clothing_section();
+
+//by this line i'll delete all the related sections for a specific store 
+//from the store_clothing_section db table, because some of sections could be 
+//edited and uncheked
+$store_clothing_section->delete_all_store_clothing_section($_GET['store_id']);
+
+if (isset($_GET['men']) &&
+        $store_clothing_section->check_if_not_exist($_GET['store_id']
+                , $_GET['men']) == TRUE) {
+    $store_clothing_section->store_clothing_section_insert($_GET['store_id']
+            , $_GET['men']);
+}
+if (isset($_GET['women']) && $_GET['women'] == 2 &&
+        $store_clothing_section->check_if_not_exist($_GET['store_id']
+                , $_GET['women']) == TRUE) {
+    $store_clothing_section->store_clothing_section_insert($_GET['store_id']
+            , $_GET['women']);
+}
+if (isset($_GET['children']) && $_GET['children'] == 3 &&
+        $store_clothing_section->check_if_not_exist($_GET['store_id']
+                , $_GET['children']) == TRUE) {
+    $store_clothing_section->store_clothing_section_insert($_GET['store_id']
+            , $_GET['children']);
+}
