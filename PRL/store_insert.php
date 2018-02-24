@@ -40,11 +40,6 @@ $store->store_insert($store_id, $store_name, $area_id, $complex_id, $store_image
 include_once '../BLL/store_clothing_section.php';
 $store_clothing_section = new store_clothing_section();
 
-//by this line i'll delete all the related sections for a specific store 
-//from the store_clothing_section db table, because some of sections could be 
-//edited and uncheked
-$store_clothing_section->delete_all_store_clothing_section($store_id);
-
 //bellow for each sectio i'll check if it exist in the url to added in the db 
 //table
 if (isset($_GET['men']) && $_GET['men'] = 1 &&
