@@ -45,6 +45,8 @@ $store_clothing_section = new store_clothing_section();
 //edited and uncheked
 $store_clothing_section->delete_all_store_clothing_section($_GET['store_id']);
 
+//bellow for each sectio i'll check if it exist in the url to added in the db 
+//table
 if (isset($_GET['men']) &&
         $store_clothing_section->check_if_not_exist($_GET['store_id']
                 , $_GET['men']) == TRUE) {
