@@ -11,7 +11,7 @@ and open the template in the editor.
     </head>
     <body>
         <?php 
-        //mazen 
+        //mazen 1
         ?>
     </body>
 </html>
