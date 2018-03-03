@@ -2,7 +2,7 @@
 
 include_once '../DAL/my_db.php';
 
-class store extends my_db {
+class governorate extends my_db {
 
     //here by this function i get the max id stored in the store db table,
     //to be able to decide the next id of the next stored store.
