@@ -1,3 +1,3 @@
 <?php
 
-echo $_GET['i']
+//echo $_GET['i']
